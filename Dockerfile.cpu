@@ -1,0 +1,23 @@
+FROM ubuntu:23.04
+
+# Use Bash as shell
+SHELL ["/bin/bash", "-c"]
+
+# Install Mambaforge
+RUN \
+    apt-get update && \
+    apt-get install -y wget && \
+    wget -nv -O conda.sh https://github.com/conda-forge/miniforge/releases/download/23.1.0-2/Mambaforge-23.1.0-2-Linux-x86_64.sh  && \
+    bash conda.sh -b -p /opt/mambaforge
+
+ENV PATH=/opt/mambaforge/bin:$PATH
+
+RUN conda init bash
+
+RUN mamba create -n cpu_hpo -c conda-forge python=3.9 scikit-learn pandas optuna pyarrow dask distributed dask-ml xgboost && \
+    mamba clean --all
+
+# Activate the environment and run subsequent commands within it
+SHELL ["/bin/bash", "-c"]
+
+RUN source activate cpu_hpo 
