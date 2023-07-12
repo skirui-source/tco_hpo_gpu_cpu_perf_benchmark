@@ -91,7 +91,7 @@ def train_xgboost(trial, *, dataset, client, mode):
     cv_fold_scores = []
     for i_fold in range(n_cv_folds):
         X_train, y_train, X_test, y_test = preprocess_data(
-            dataset, client=client, i_fold=i_fold
+            dataset, client=client, i_fold=i_fold, mode=mode
         )
         
         if mode == "gpu":
@@ -168,18 +168,18 @@ def main(args):
         cluster = LocalCluster(n_workers=os.cpu_count())
 
     with Client(cluster) as client:
-        dataset = ingest_data(mode)
+        dataset = ingest_data(mode=args.mode)
         client.persist(dataset)
         if args.model_type == "XGBoost":
             study.optimize(
-                lambda trial: train_xgboost(mode, trial, dataset=dataset, client=client),
+                lambda trial: train_xgboost(trial, dataset=dataset, client=client, mode=args.mode),
                 n_trials=100,
                 n_jobs=1,
             )
         else:
             study.optimize(
                 lambda trial: train_randomforest(
-                    mode, trial, dataset=dataset, client=client,
+                    trial, dataset=dataset, client=client, mode=args.mode
                 ),
                 n_trials=100,
                 n_jobs=1,
