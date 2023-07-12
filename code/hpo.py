@@ -194,7 +194,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model-type", type=str, required=True, choices=["XGBoost", "RandomForest"]
     )
-    parser.add_argument("--mode", required=True, choices=["gpu", "cpu"]             
+    parser.add_argument("--mode", required=True, choices=["gpu", "cpu"])             
     parser.add_argument("--seed", required=False, type=int, default=1)
     args = parser.parse_args()
     main(args)
