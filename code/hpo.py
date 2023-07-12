@@ -162,7 +162,7 @@ def main(args):
         sampler=RandomSampler(seed=args.seed), direction="maximize"
     )
         
-    if mode == "gpu":
+    if args.mode == "gpu":
         cluster = LocalCUDACluster()
     else:
         cluster = LocalCluster(n_workers=os.cpu_count())
