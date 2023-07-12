@@ -98,10 +98,12 @@ def train_xgboost(trial, *, dataset, client, mode):
             params["tree_method"]="gpu_hist"
             dtrain = xgb.dask.DaskDeviceQuantileDMatrix(client, X_train, y_train)
             dtest = xgb.dask.DaskDeviceQuantileDMatrix(client, X_test)
+            accuracy_score = accuracy_score_gpu
         else:
             params["tree_method"]="hist"
             dtrain = xgb.dask.DaskDMatrix(client, X_train, y_train)
             dtest = xgb.dask.DaskDMatrix(client, X_test)
+            accuracy_score = accuracy_score_cpu
             
         xgboost_output = xgb.dask.train(
             client, params, dtrain, num_boost_round=num_boost_round
