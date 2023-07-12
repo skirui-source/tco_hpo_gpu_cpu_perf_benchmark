@@ -172,14 +172,14 @@ def main(args):
         client.persist(dataset)
         if args.model_type == "XGBoost":
             study.optimize(
-                lambda trial: train_xgboost(trial, dataset=dataset, client=client, mode),
+                lambda trial: train_xgboost(mode, trial, dataset=dataset, client=client),
                 n_trials=100,
                 n_jobs=1,
             )
         else:
             study.optimize(
                 lambda trial: train_randomforest(
-                    trial, dataset=dataset, client=client, mode
+                    mode, trial, dataset=dataset, client=client,
                 ),
                 n_trials=100,
                 n_jobs=1,
