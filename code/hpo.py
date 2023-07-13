@@ -138,7 +138,7 @@ def train_randomforest(trial, *, dataset, client, mode):
     cv_fold_scores = []
     for i_fold in range(n_cv_folds):
         X_train, y_train, X_test, y_test = preprocess_data(
-            dataset, client=client, i_fold=i_fold
+            dataset, client=client, i_fold=i_fold, mode=mode
         )
     
         if mode == "gpu":
