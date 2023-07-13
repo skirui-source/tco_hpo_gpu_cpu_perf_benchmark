@@ -98,12 +98,12 @@ def train_xgboost(trial, *, dataset, client, mode):
             params["tree_method"]="gpu_hist"
             dtrain = xgb.dask.DaskDeviceQuantileDMatrix(client, X_train, y_train)
             dtest = xgb.dask.DaskDeviceQuantileDMatrix(client, X_test)
-            accuracy_score = accuracy_score_gpu
+            accuracy_score_func = accuracy_score_gpu
         else:
             params["tree_method"]="hist"
             dtrain = xgb.dask.DaskDMatrix(client, X_train, y_train)
             dtest = xgb.dask.DaskDMatrix(client, X_test)
-            accuracy_score = accuracy_score_cpu
+            accuracy_score_func = accuracy_score_cpu
             
         xgboost_output = xgb.dask.train(
             client, params, dtrain, num_boost_round=num_boost_round
@@ -113,7 +113,7 @@ def train_xgboost(trial, *, dataset, client, mode):
         pred = xgb.dask.predict(client, trained_model, dtest) > 0.5
         pred = pred.astype("int32").compute()
         y_test = y_test.compute()
-        score = accuracy_score(y_test, pred)
+        score = accuracy_score_func(y_test, pred)
         cv_fold_scores.append(score)
     final_score = sum(cv_fold_scores) / len(cv_fold_scores)
     return final_score
@@ -143,15 +143,15 @@ def train_randomforest(trial, *, dataset, client, mode):
     
         if mode == "gpu":
             trained_model = RF_gpu(client=client, **params)
-            accuracy_score = accuracy_score_gpu
+            accuracy_score_func = accuracy_score_gpu
         else: 
             trained_model = RF_cpu(**params)
-            accuracy_score = accuracy_score_cpu
+            accuracy_score_func = accuracy_score_cpu
 
         trained_model.fit(X_train, y_train) 
         pred = trained_model.predict(X_test).compute()
         y_test = y_test.compute()
-        score = accuracy_score(y_test, pred) 
+        score = accuracy_score_func(y_test, pred) 
         cv_fold_scores.append(score)
     final_score = sum(cv_fold_scores) / len(cv_fold_scores)
     return final_score
