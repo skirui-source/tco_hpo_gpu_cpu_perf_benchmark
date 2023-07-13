@@ -66,7 +66,7 @@ def preprocess_data(dataset, *, client, i_fold, mode):
             client, [X_train, y_train, X_test, y_test], workers=client.has_what().keys()
         )
     else:
-        X_train, Y_train = X_train.persist(), y_train.persist()
+        X_train, y_train = X_train.persist(), y_train.persist()
         X_test, y_test = X_test.persist(), y_test.persist()
     
     wait([X_train, y_train, X_test, y_test])
