@@ -125,8 +125,8 @@ def train_randomforest(trial, *, dataset, client, mode):
         "max_features": trial.suggest_float("max_features", 0.1, 1.0),
         "n_estimators": trial.suggest_int("n_estimators", 100, 500, step=10),
         
-        "split_criterion": trial.suggest_categorical(
-            "split_criterion", ["gini", "entropy"]
+        "criterion": trial.suggest_categorical(
+            "criterion", ["gini", "entropy"]
         ),
         
         "min_samples_split": trial.suggest_int("min_samples_split", 2, 1000, log=True),
