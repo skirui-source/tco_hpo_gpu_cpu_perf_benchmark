@@ -148,7 +148,7 @@ def train_randomforest(trial, *, dataset, client, mode):
             accuracy_score_func = accuracy_score_cpu
 
         trained_model.fit(X_train, y_train) 
-        pred = trained_model.predict(X_test).compute()
+        pred = trained_model.predict(X_test)
         y_test = y_test.compute()
         score = accuracy_score_func(y_test, pred) 
         cv_fold_scores.append(score)
