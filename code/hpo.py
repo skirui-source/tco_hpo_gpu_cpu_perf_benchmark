@@ -125,14 +125,11 @@ def train_randomforest(trial, *, dataset, client, mode):
         "max_features": trial.suggest_float("max_features", 0.1, 1.0),
         "n_estimators": trial.suggest_int("n_estimators", 100, 500, step=10),
         
+        # rename `criterion` to `split_criterion` for gpu test
         "criterion": trial.suggest_categorical(
             "criterion", ["gini", "entropy"]
         ),
-        
-        "min_samples_split": trial.suggest_int("min_samples_split", 2, 1000, log=True),
-        
-        "n_bins": 256,
-        
+        "min_samples_split": trial.suggest_int("min_samples_split", 2, 1000, log=True),  
     }
 
     cv_fold_scores = []
@@ -142,9 +139,11 @@ def train_randomforest(trial, *, dataset, client, mode):
         )
     
         if mode == "gpu":
+            params["n_bins"]=256
             trained_model = RF_gpu(client=client, **params)
             accuracy_score_func = accuracy_score_gpu
         else: 
+            params["n_jobs"]=-1
             trained_model = RF_cpu(**params)
             accuracy_score_func = accuracy_score_cpu
 
