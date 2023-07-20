@@ -35,9 +35,9 @@ feature_columns = [
 
 def ingest_data():
     dataset = dask.dataframe.read_parquet(
-        glob.glob("./3_year/*.parquet"),
-        columns=feature_columns,
-    ).repartition(npartitions=1000)
+            glob.glob("./data/*.parquet"),
+            columns=feature_columns,
+        ).repartition(npartitions=1000)
     return dataset
 
 
