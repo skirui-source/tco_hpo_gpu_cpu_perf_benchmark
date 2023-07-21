@@ -1,486 +1,769 @@
-[I 2023-07-15 04:26:49,243] A new study created in memory with name: no-name-41bac7db-00f1-4314-a35c-5505858f78bf
-2023-07-15 04:27:05,426 - distributed.worker - ERROR - Exception during execution of task ('repartition-1000-3ec5f199100e2771caafe1c13e0c892e', 918).
+[I 2023-07-20 17:54:45,201] A new study created in memory with name: no-name-f90b0418-127c-41bd-9466-9587785fb437
+[I 2023-07-20 18:41:12,514] Trial 0 finished with value: 0.9165596696711311 and parameters: {'max_depth': 9, 'max_features': 0.7482920440979423, 'n_estimators': 100, 'criterion': 'gini', 'min_samples_split': 5}. Best is trial 0 with value: 0.9165596696711311.
+[I 2023-07-20 20:01:37,597] Trial 1 finished with value: 0.9144719444217058 and parameters: {'max_depth': 8, 'max_features': 0.457090726807603, 'n_estimators': 320, 'criterion': 'entropy', 'min_samples_split': 453}. Best is trial 0 with value: 0.9165596696711311.
+[I 2023-07-20 21:16:00,255] Trial 2 finished with value: 0.9132888256947886 and parameters: {'max_depth': 5, 'max_features': 0.703420759160562, 'n_estimators': 270, 'criterion': 'gini', 'min_samples_split': 274}. Best is trial 0 with value: 0.9165596696711311.
+[I 2023-07-20 23:18:26,337] Trial 3 finished with value: 0.9195810156716971 and parameters: {'max_depth': 15, 'max_features': 0.38208176034331853, 'n_estimators': 380, 'criterion': 'entropy', 'min_samples_split': 2}. Best is trial 3 with value: 0.9195810156716971.
+[I 2023-07-21 00:12:06,809] Trial 4 finished with value: 0.9137341859081358 and parameters: {'max_depth': 6, 'max_features': 0.8903282530864718, 'n_estimators': 140, 'criterion': 'entropy', 'min_samples_split': 135}. Best is trial 3 with value: 0.9195810156716971.
+[I 2023-07-21 03:08:03,163] Trial 5 finished with value: 0.9153887074675826 and parameters: {'max_depth': 8, 'max_features': 0.7178508349134253, 'n_estimators': 440, 'criterion': 'log_loss', 'min_samples_split': 195}. Best is trial 3 with value: 0.9195810156716971.
+[I 2023-07-21 04:10:07,054] Trial 6 finished with value: 0.9154645864940957 and parameters: {'max_depth': 8, 'max_features': 0.8103513956063396, 'n_estimators': 140, 'criterion': 'entropy', 'min_samples_split': 10}. Best is trial 3 with value: 0.9195810156716971.
+[I 2023-07-21 04:41:20,335] Trial 7 finished with value: 0.9124654241282728 and parameters: {'max_depth': 6, 'max_features': 0.11743026208326737, 'n_estimators': 370, 'criterion': 'log_loss', 'min_samples_split': 2}. Best is trial 3 with value: 0.9195810156716971.
+[I 2023-07-21 05:53:59,510] Trial 8 finished with value: 0.9153935234424825 and parameters: {'max_depth': 11, 'max_features': 0.23205571741522915, 'n_estimators': 340, 'criterion': 'gini', 'min_samples_split': 137}. Best is trial 3 with value: 0.9195810156716971.
+[I 2023-07-21 06:28:54,629] Trial 9 finished with value: 0.9124653404041261 and parameters: {'max_depth': 9, 'max_features': 0.14495811305147846, 'n_estimators': 310, 'criterion': 'log_loss', 'min_samples_split': 68}. Best is trial 3 with value: 0.9195810156716971.
+[I 2023-07-21 06:59:15,704] Trial 10 finished with value: 0.9152374742799635 and parameters: {'max_depth': 14, 'max_features': 0.2237272337316138, 'n_estimators': 150, 'criterion': 'gini', 'min_samples_split': 624}. Best is trial 3 with value: 0.9195810156716971.
+[I 2023-07-21 09:52:20,130] Trial 11 finished with value: 0.9155862444458887 and parameters: {'max_depth': 8, 'max_features': 0.7757308928225399, 'n_estimators': 390, 'criterion': 'gini', 'min_samples_split': 15}. Best is trial 3 with value: 0.9195810156716971.
+[I 2023-07-21 11:45:17,105] Trial 12 finished with value: 0.9145885834174603 and parameters: {'max_depth': 7, 'max_features': 0.9062975963764601, 'n_estimators': 270, 'criterion': 'gini', 'min_samples_split': 3}. Best is trial 3 with value: 0.9195810156716971.
+[I 2023-07-21 14:04:48,441] Trial 13 finished with value: 0.9214752413908341 and parameters: {'max_depth': 15, 'max_features': 0.5049209201319464, 'n_estimators': 330, 'criterion': 'log_loss', 'min_samples_split': 63}. Best is trial 13 with value: 0.9214752413908341.
+[I 2023-07-21 15:00:43,916] Trial 14 finished with value: 0.9131649697479135 and parameters: {'max_depth': 5, 'max_features': 0.6554304222586514, 'n_estimators': 230, 'criterion': 'entropy', 'min_samples_split': 552}. Best is trial 13 with value: 0.9214752413908341.
+[I 2023-07-21 16:00:52,314] Trial 15 finished with value: 0.9127422797993093 and parameters: {'max_depth': 11, 'max_features': 0.11423911856190067, 'n_estimators': 480, 'criterion': 'entropy', 'min_samples_split': 4}. Best is trial 13 with value: 0.9214752413908341.
+[I 2023-07-21 17:13:03,155] Trial 16 finished with value: 0.9227872399964696 and parameters: {'max_depth': 15, 'max_features': 0.7271363453409101, 'n_estimators': 120, 'criterion': 'log_loss', 'min_samples_split': 153}. Best is trial 16 with value: 0.9227872399964696.
+[I 2023-07-21 17:23:34,102] Trial 17 finished with value: 0.9124520797049256 and parameters: {'max_depth': 6, 'max_features': 0.11789212045581604, 'n_estimators': 110, 'criterion': 'log_loss', 'min_samples_split': 50}. Best is trial 16 with value: 0.9227872399964696.
+[I 2023-07-21 18:51:26,568] Trial 18 finished with value: 0.9185657816571655 and parameters: {'max_depth': 11, 'max_features': 0.8578278031236451, 'n_estimators': 150, 'criterion': 'log_loss', 'min_samples_split': 58}. Best is trial 16 with value: 0.9227872399964696.
+[I 2023-07-21 19:46:08,702] Trial 19 finished with value: 0.9131231068747988 and parameters: {'max_depth': 5, 'max_features': 0.8205694054125547, 'n_estimators': 190, 'criterion': 'log_loss', 'min_samples_split': 193}. Best is trial 16 with value: 0.9227872399964696.
+[I 2023-07-21 20:07:21,577] Trial 20 finished with value: 0.9141161918752363 and parameters: {'max_depth': 11, 'max_features': 0.2228097030946165, 'n_estimators': 120, 'criterion': 'gini', 'min_samples_split': 7}. Best is trial 16 with value: 0.9227872399964696.
+[W 2023-07-21 20:18:07,673] Trial 21 failed with parameters: {'max_depth': 12, 'max_features': 0.6037452838487282, 'n_estimators': 100, 'criterion': 'entropy', 'min_samples_split': 6} because of the following error: KeyboardInterrupt().
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
-    return self.fast[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
-    result = self.d[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 34)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/rapids/notebooks/host/code/hpo_cpu.py", line 149, in <lambda>
+    lambda trial: train_randomforest(
+  File "/rapids/notebooks/host/code/hpo_cpu.py", line 120, in train_randomforest
+    trained_model.fit(X_train, y_train)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/sklearn/ensemble/_forest.py", line 473, in fit
+    trees = Parallel(
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/sklearn/utils/parallel.py", line 63, in __call__
+    return super().__call__(iterable_with_config)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/joblib/parallel.py", line 1098, in __call__
+    self.retrieve()
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/joblib/parallel.py", line 975, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/pool.py", line 768, in get
+    self.wait(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/pool.py", line 765, in wait
+    self._event.wait(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/threading.py", line 607, in wait
+    signaled = self._cond.wait(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/threading.py", line 320, in wait
+    waiter.acquire()
+KeyboardInterrupt
+[W 2023-07-21 20:18:07,685] Trial 21 failed with value None.
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2382, in _prepare_args_for_execution
-    data[k] = self.data[k]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/spill.py", line 226, in __getitem__
-    return super().__getitem__(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
-    return self.slow_to_fast(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
-    value = self.slow[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
-    gen = self._last_updated[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 34)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2259, in execute
-    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2386, in _prepare_args_for_execution
-    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 34)"
-2023-07-15 04:27:05,426 - distributed.worker - ERROR - Exception during execution of task ('repartition-1000-3ec5f199100e2771caafe1c13e0c892e', 864).
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
-    return self.fast[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
-    result = self.d[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 32)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2382, in _prepare_args_for_execution
-    data[k] = self.data[k]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/spill.py", line 226, in __getitem__
-    return super().__getitem__(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
-    return self.slow_to_fast(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
-    value = self.slow[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
-    gen = self._last_updated[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 32)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2259, in execute
-    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2386, in _prepare_args_for_execution
-    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 32)"
-2023-07-15 04:27:05,426 - distributed.worker - ERROR - Exception during execution of task ('repartition-1000-3ec5f199100e2771caafe1c13e0c892e', 405).
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
-    return self.fast[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
-    result = self.d[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 15)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2382, in _prepare_args_for_execution
-    data[k] = self.data[k]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/spill.py", line 226, in __getitem__
-    return super().__getitem__(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
-    return self.slow_to_fast(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
-    value = self.slow[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
-    gen = self._last_updated[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 15)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2259, in execute
-    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2386, in _prepare_args_for_execution
-    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 15)"
-2023-07-15 04:27:05,427 - distributed.worker - ERROR - Exception during execution of task ('repartition-1000-3ec5f199100e2771caafe1c13e0c892e', 297).
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
-    return self.fast[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
-    result = self.d[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 11)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2382, in _prepare_args_for_execution
-    data[k] = self.data[k]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/spill.py", line 226, in __getitem__
-    return super().__getitem__(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
-    return self.slow_to_fast(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
-    value = self.slow[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
-    gen = self._last_updated[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 11)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2259, in execute
-    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2386, in _prepare_args_for_execution
-    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 11)"
-2023-07-15 04:27:05,427 - distributed.worker - ERROR - Exception during execution of task ('repartition-1000-3ec5f199100e2771caafe1c13e0c892e', 351).
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
-    return self.fast[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
-    result = self.d[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 13)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2382, in _prepare_args_for_execution
-    data[k] = self.data[k]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/spill.py", line 226, in __getitem__
-    return super().__getitem__(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
-    return self.slow_to_fast(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
-    value = self.slow[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
-    gen = self._last_updated[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 13)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2259, in execute
-    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2386, in _prepare_args_for_execution
-    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 13)"
-2023-07-15 04:27:05,429 - distributed.worker - ERROR - Exception during execution of task ('repartition-1000-3ec5f199100e2771caafe1c13e0c892e', 432).
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
-    return self.fast[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
-    result = self.d[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 16)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2382, in _prepare_args_for_execution
-    data[k] = self.data[k]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/spill.py", line 226, in __getitem__
-    return super().__getitem__(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
-    return self.slow_to_fast(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
-    value = self.slow[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
-    gen = self._last_updated[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 16)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2259, in execute
-    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2386, in _prepare_args_for_execution
-    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 16)"
-2023-07-15 04:27:05,430 - distributed.worker - ERROR - Exception during execution of task ('repartition-1000-3ec5f199100e2771caafe1c13e0c892e', 486).
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
-    return self.fast[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
-    result = self.d[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 18)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2382, in _prepare_args_for_execution
-    data[k] = self.data[k]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/spill.py", line 226, in __getitem__
-    return super().__getitem__(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
-    return self.slow_to_fast(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
-    value = self.slow[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
-    gen = self._last_updated[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 18)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2259, in execute
-    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2386, in _prepare_args_for_execution
-    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 18)"
-2023-07-15 04:27:05,432 - distributed.worker - ERROR - Exception during execution of task ('repartition-1000-3ec5f199100e2771caafe1c13e0c892e', 945).
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
-    return self.fast[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
-    result = self.d[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 35)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2382, in _prepare_args_for_execution
-    data[k] = self.data[k]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/spill.py", line 226, in __getitem__
-    return super().__getitem__(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
-    return self.slow_to_fast(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
-    value = self.slow[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
-    gen = self._last_updated[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 35)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2259, in execute
-    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2386, in _prepare_args_for_execution
-    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 35)"
-2023-07-15 04:27:05,433 - distributed.worker - ERROR - Exception during execution of task ('repartition-1000-3ec5f199100e2771caafe1c13e0c892e', 378).
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
-    return self.fast[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
-    result = self.d[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 14)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2382, in _prepare_args_for_execution
-    data[k] = self.data[k]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/spill.py", line 226, in __getitem__
-    return super().__getitem__(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
-    return self.slow_to_fast(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
-    value = self.slow[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
-    gen = self._last_updated[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 14)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2259, in execute
-    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2386, in _prepare_args_for_execution
-    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 14)"
-2023-07-15 04:27:05,434 - distributed.worker - ERROR - Exception during execution of task ('repartition-1000-3ec5f199100e2771caafe1c13e0c892e', 702).
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
-    return self.fast[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
-    result = self.d[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 26)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2382, in _prepare_args_for_execution
-    data[k] = self.data[k]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/spill.py", line 226, in __getitem__
-    return super().__getitem__(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
-    return self.slow_to_fast(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
-    value = self.slow[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
-    gen = self._last_updated[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 26)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2259, in execute
-    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2386, in _prepare_args_for_execution
-    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 26)"
-2023-07-15 04:27:05,435 - distributed.worker - ERROR - Exception during execution of task ('repartition-1000-3ec5f199100e2771caafe1c13e0c892e', 324).
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/tornado/ioloop.py", line 740, in _run_callback
+    from tornado import gen
+  File "<frozen importlib._bootstrap>", line 1053, in _handle_fromlist
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
-    return self.fast[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
-    result = self.d[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 12)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2382, in _prepare_args_for_execution
-    data[k] = self.data[k]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/spill.py", line 226, in __getitem__
-    return super().__getitem__(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
-    return self.slow_to_fast(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
-    value = self.slow[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
-    gen = self._last_updated[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 12)"
-
-During handling of the above exception, another exception occurred:
-
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Process Dask Worker process (from Nanny):
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2259, in execute
-    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2386, in _prepare_args_for_execution
-    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 12)"
-2023-07-15 04:27:05,435 - distributed.worker - ERROR - Exception during execution of task ('repartition-1000-3ec5f199100e2771caafe1c13e0c892e', 756).
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/process.py", line 202, in _run
+    target(*args, **kwargs)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/nanny.py", line 990, in _run
+    asyncio.run(run())
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/rapids/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+sys:1: RuntimeWarning: coroutine 'PeriodicCallback._run' was never awaited
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+2023-07-21 20:18:14,453 - distributed.nanny - WARNING - Worker process still alive after 3.199997711181641 seconds, killing
+2023-07-21 20:18:14,454 - distributed.nanny - WARNING - Worker process still alive after 3.1999980163574224 seconds, killing
+2023-07-21 20:18:14,454 - distributed.nanny - WARNING - Worker process still alive after 3.1999975585937506 seconds, killing
+2023-07-21 20:18:14,455 - distributed.nanny - WARNING - Worker process still alive after 3.199997711181641 seconds, killing
+2023-07-21 20:18:14,455 - distributed.nanny - WARNING - Worker process still alive after 3.1999975585937506 seconds, killing
+2023-07-21 20:18:14,455 - distributed.nanny - WARNING - Worker process still alive after 3.1999975585937506 seconds, killing
+2023-07-21 20:18:14,456 - distributed.nanny - WARNING - Worker process still alive after 3.199997711181641 seconds, killing
+2023-07-21 20:18:14,456 - distributed.nanny - WARNING - Worker process still alive after 3.199997711181641 seconds, killing
 Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
-    return self.fast[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
-    result = self.d[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 28)"
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2382, in _prepare_args_for_execution
-    data[k] = self.data[k]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/spill.py", line 226, in __getitem__
-    return super().__getitem__(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
-    return self.slow_to_fast(key)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
-    value = self.slow[key]
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
-    return func(*args, **kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
-    gen = self._last_updated[key]
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 28)"
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2259, in execute
-    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
-  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/distributed/worker.py", line 2386, in _prepare_args_for_execution
-    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
-KeyError: "('split-ad3d704d6281abd28d4b7e616a61f815', 28)"
-[I 2023-07-15 05:23:35,476] Trial 0 finished with value: 0.9165668620599666 and parameters: {'max_depth': 9, 'max_features': 0.7482920440979423, 'n_estimators': 100, 'criterion': 'gini', 'min_samples_split': 3}. Best is trial 0 with value: 0.9165668620599666.
-[I 2023-07-15 06:35:04,201] Trial 1 finished with value: 0.9140249123915778 and parameters: {'max_depth': 7, 'max_features': 0.411004654338743, 'n_estimators': 260, 'criterion': 'gini', 'min_samples_split': 129}. Best is trial 0 with value: 0.9165668620599666.
-[I 2023-07-15 07:24:33,966] Trial 2 finished with value: 0.9145894661345967 and parameters: {'max_depth': 7, 'max_features': 0.8903056927518509, 'n_estimators': 110, 'criterion': 'gini', 'min_samples_split': 57}. Best is trial 0 with value: 0.9165668620599666.
-[I 2023-07-15 08:21:56,336] Trial 3 finished with value: 0.9128727134965624 and parameters: {'max_depth': 6, 'max_features': 0.2782913401763909, 'n_estimators': 420, 'criterion': 'gini', 'min_samples_split': 135}. Best is trial 0 with value: 0.9165668620599666.
-[I 2023-07-15 09:53:35,021] Trial 4 finished with value: 0.9216964813883696 and parameters: {'max_depth': 14, 'max_features': 0.9051459971534626, 'n_estimators': 130, 'criterion': 'entropy', 'min_samples_split': 453}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-15 11:40:10,709] Trial 5 finished with value: 0.9132732295038712 and parameters: {'max_depth': 6, 'max_features': 0.478996862504547, 'n_estimators': 490, 'criterion': 'entropy', 'min_samples_split': 12}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-15 12:45:58,269] Trial 6 finished with value: 0.9197902140974819 and parameters: {'max_depth': 12, 'max_features': 0.8511631047076356, 'n_estimators': 100, 'criterion': 'entropy', 'min_samples_split': 195}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-15 13:45:30,824] Trial 7 finished with value: 0.9154474251596791 and parameters: {'max_depth': 8, 'max_features': 0.8103513956063396, 'n_estimators': 140, 'criterion': 'entropy', 'min_samples_split': 10}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-15 14:00:40,558] Trial 8 finished with value: 0.9131030076136977 and parameters: {'max_depth': 8, 'max_features': 0.2170257149064499, 'n_estimators': 100, 'criterion': 'gini', 'min_samples_split': 8}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-15 14:40:33,061] Trial 9 finished with value: 0.9125942594798744 and parameters: {'max_depth': 10, 'max_features': 0.14802629060537237, 'n_estimators': 330, 'criterion': 'entropy', 'min_samples_split': 142}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-15 16:12:09,439] Trial 10 finished with value: 0.9135752490085712 and parameters: {'max_depth': 6, 'max_features': 0.4726503890376115, 'n_estimators': 380, 'criterion': 'gini', 'min_samples_split': 49}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-15 20:00:00,879] Trial 11 finished with value: 0.9187472769265523 and parameters: {'max_depth': 12, 'max_features': 0.5634002008524778, 'n_estimators': 480, 'criterion': 'entropy', 'min_samples_split': 4}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-15 21:45:35,964] Trial 12 finished with value: 0.9136559432974336 and parameters: {'max_depth': 6, 'max_features': 0.8266521598385714, 'n_estimators': 260, 'criterion': 'entropy', 'min_samples_split': 14}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-16 02:33:17,138] Trial 13 finished with value: 0.9206326752324354 and parameters: {'max_depth': 13, 'max_features': 0.7533981868154063, 'n_estimators': 460, 'criterion': 'entropy', 'min_samples_split': 15}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-16 04:41:01,568] Trial 14 finished with value: 0.9145991873311736 and parameters: {'max_depth': 7, 'max_features': 0.9062975963764601, 'n_estimators': 270, 'criterion': 'gini', 'min_samples_split': 85}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-16 07:01:32,550] Trial 15 finished with value: 0.9137773674476328 and parameters: {'max_depth': 6, 'max_features': 0.9545403328363641, 'n_estimators': 280, 'criterion': 'gini', 'min_samples_split': 7}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-16 08:09:43,659] Trial 16 finished with value: 0.9216914742394016 and parameters: {'max_depth': 14, 'max_features': 0.6163115380050572, 'n_estimators': 100, 'criterion': 'gini', 'min_samples_split': 46}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-16 10:57:35,597] Trial 17 finished with value: 0.918806218743186 and parameters: {'max_depth': 14, 'max_features': 0.42154278400224976, 'n_estimators': 470, 'criterion': 'gini', 'min_samples_split': 632}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-16 12:51:42,736] Trial 18 finished with value: 0.9199551617450895 and parameters: {'max_depth': 12, 'max_features': 0.9975905654063324, 'n_estimators': 170, 'criterion': 'entropy', 'min_samples_split': 139}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-16 14:45:26,066] Trial 19 finished with value: 0.9132766825626923 and parameters: {'max_depth': 5, 'max_features': 0.7799167473422197, 'n_estimators': 400, 'criterion': 'gini', 'min_samples_split': 3}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-16 14:55:06,494] Trial 20 finished with value: 0.912110155995385 and parameters: {'max_depth': 5, 'max_features': 0.12358988818994736, 'n_estimators': 110, 'criterion': 'entropy', 'min_samples_split': 50}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-16 16:33:36,628] Trial 21 finished with value: 0.918347723523772 and parameters: {'max_depth': 11, 'max_features': 0.8578278031236451, 'n_estimators': 150, 'criterion': 'entropy', 'min_samples_split': 821}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-16 17:32:57,336] Trial 22 finished with value: 0.9127074358536301 and parameters: {'max_depth': 11, 'max_features': 0.11678256043564872, 'n_estimators': 420, 'criterion': 'entropy', 'min_samples_split': 19}. Best is trial 4 with value: 0.9216964813883696.
-[I 2023-07-16 21:29:24,874] Trial 23 finished with value: 0.9224900089290295 and parameters: {'max_depth': 14, 'max_features': 0.7724094784634662, 'n_estimators': 320, 'criterion': 'gini', 'min_samples_split': 3}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-16 21:50:52,654] Trial 24 finished with value: 0.9125966454112453 and parameters: {'max_depth': 5, 'max_features': 0.19674471619548362, 'n_estimators': 190, 'criterion': 'gini', 'min_samples_split': 2}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-16 23:56:43,821] Trial 25 finished with value: 0.9130474941987352 and parameters: {'max_depth': 5, 'max_features': 0.9705486970002448, 'n_estimators': 330, 'criterion': 'entropy', 'min_samples_split': 189}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-17 02:57:00,510] Trial 26 finished with value: 0.9146145713799051 and parameters: {'max_depth': 7, 'max_features': 0.623223034545932, 'n_estimators': 490, 'criterion': 'gini', 'min_samples_split': 37}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-17 04:40:39,279] Trial 27 finished with value: 0.9185137290630884 and parameters: {'max_depth': 11, 'max_features': 0.8460828095951608, 'n_estimators': 160, 'criterion': 'entropy', 'min_samples_split': 35}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-17 06:37:00,116] Trial 28 finished with value: 0.9180143612690614 and parameters: {'max_depth': 11, 'max_features': 0.6119662933778331, 'n_estimators': 230, 'criterion': 'gini', 'min_samples_split': 18}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-17 10:49:46,660] Trial 29 finished with value: 0.918811494197203 and parameters: {'max_depth': 11, 'max_features': 0.7708009878158518, 'n_estimators': 370, 'criterion': 'gini', 'min_samples_split': 17}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-17 12:19:47,606] Trial 30 finished with value: 0.9149333717722206 and parameters: {'max_depth': 11, 'max_features': 0.28915660892335565, 'n_estimators': 400, 'criterion': 'entropy', 'min_samples_split': 281}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-17 14:00:15,198] Trial 31 finished with value: 0.9146366684735321 and parameters: {'max_depth': 7, 'max_features': 0.6755147927919462, 'n_estimators': 310, 'criterion': 'gini', 'min_samples_split': 2}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-17 19:14:08,808] Trial 32 finished with value: 0.9212268392986032 and parameters: {'max_depth': 13, 'max_features': 0.7949602265889221, 'n_estimators': 470, 'criterion': 'gini', 'min_samples_split': 7}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-18 01:16:59,206] Trial 33 finished with value: 0.9186670914624766 and parameters: {'max_depth': 11, 'max_features': 0.9541146886188547, 'n_estimators': 480, 'criterion': 'entropy', 'min_samples_split': 97}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-18 03:20:31,125] Trial 34 finished with value: 0.9155408848991234 and parameters: {'max_depth': 9, 'max_features': 0.5373916003872188, 'n_estimators': 340, 'criterion': 'entropy', 'min_samples_split': 590}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-18 05:14:34,426] Trial 35 finished with value: 0.9163663681569642 and parameters: {'max_depth': 9, 'max_features': 0.9669362755966406, 'n_estimators': 170, 'criterion': 'entropy', 'min_samples_split': 40}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-18 07:38:18,856] Trial 36 finished with value: 0.9130401732006781 and parameters: {'max_depth': 5, 'max_features': 0.9531731900959128, 'n_estimators': 430, 'criterion': 'entropy', 'min_samples_split': 13}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-18 08:57:24,802] Trial 37 finished with value: 0.9137742208130352 and parameters: {'max_depth': 6, 'max_features': 0.8285416229139239, 'n_estimators': 240, 'criterion': 'gini', 'min_samples_split': 455}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-18 12:04:13,901] Trial 38 finished with value: 0.9224553231463405 and parameters: {'max_depth': 14, 'max_features': 0.9148530868377843, 'n_estimators': 280, 'criterion': 'entropy', 'min_samples_split': 10}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-18 12:48:06,893] Trial 39 finished with value: 0.9173075275477209 and parameters: {'max_depth': 10, 'max_features': 0.6391992768812905, 'n_estimators': 100, 'criterion': 'gini', 'min_samples_split': 286}. Best is trial 23 with value: 0.9224900089290295.
-[I 2023-07-18 15:15:52,609] Trial 40 finished with value: 0.9154087385387681 and parameters: {'max_depth': 8, 'max_features': 0.9035998376726362, 'n_estimators': 330, 'criterion': 'entropy', 'min_samples_split': 80}. Best is trial 23 with value: 0.9224900089290295.
+  File "/rapids/notebooks/host/code/hpo_cpu.py", line 167, in <module>
+    main(args)
+  File "/rapids/notebooks/host/code/hpo_cpu.py", line 148, in main
+    study.optimize(
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/optuna/study/study.py", line 443, in optimize
+    _optimize(
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/optuna/study/_optimize.py", line 66, in _optimize
+    _optimize_sequential(
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/optuna/study/_optimize.py", line 163, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/optuna/study/_optimize.py", line 251, in _run_trial
+    raise func_err
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/rapids/notebooks/host/code/hpo_cpu.py", line 149, in <lambda>
+    lambda trial: train_randomforest(
+  File "/rapids/notebooks/host/code/hpo_cpu.py", line 120, in train_randomforest
+    trained_model.fit(X_train, y_train)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/sklearn/ensemble/_forest.py", line 473, in fit
+    trees = Parallel(
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/sklearn/utils/parallel.py", line 63, in __call__
+    return super().__call__(iterable_with_config)
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/joblib/parallel.py", line 1098, in __call__
+    self.retrieve()
+  File "/opt/conda/envs/rapids/lib/python3.10/site-packages/joblib/parallel.py", line 975, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/pool.py", line 768, in get
+    self.wait(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/multiprocessing/pool.py", line 765, in wait
+    self._event.wait(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/threading.py", line 607, in wait
+    signaled = self._cond.wait(timeout)
+  File "/opt/conda/envs/rapids/lib/python3.10/threading.py", line 320, in wait
+    waiter.acquire()
+KeyboardInterrupt
