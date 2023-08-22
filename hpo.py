@@ -125,7 +125,6 @@ def train_randomforest(trial, *, dataset, client, mode):
         "max_depth": trial.suggest_int("max_depth", 5, 15),
         "max_features": trial.suggest_float("max_features", 0.1, 1.0),
         "n_estimators": trial.suggest_int("n_estimators", 100, 500, step=10),
-        "criterion": trial.suggest_categorical("criterion", ["gini", "entropy"]),
         "min_samples_split": trial.suggest_int("min_samples_split", 2, 1000, log=True),
     }
 
@@ -140,9 +139,11 @@ def train_randomforest(trial, *, dataset, client, mode):
             from cuml.metrics import accuracy_score as accuracy_score_gpu
 
             params["n_bins"] = 256
+            params["split_criterion"] = trial.suggest_categorical("criterion", ["gini", "entropy"])
             trained_model = RF_gpu(client=client, **params)
             accuracy_score_func = accuracy_score_gpu
         else:
+            params["criterion"] = trial.suggest_categorical("criterion", ["gini", "entropy"])
             params["n_jobs"] = -1
             trained_model = RF_cpu(**params)
             accuracy_score_func = accuracy_score_cpu
